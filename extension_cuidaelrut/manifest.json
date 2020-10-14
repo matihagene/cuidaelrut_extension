@@ -1,0 +1,24 @@
+{
+"manifest_version": 2,
+    "name": "[cuida el RUT]",
+    "description": "[Alerta a los usuarios cuando se les pide el RUT]",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "exclude_matches" : [
+                "https://*.google.com/*",
+                "https://*.google.cl/*",
+                "https://*.wikipedia.org/*",
+                "*://*.sii.cl/*",
+                "*://*.gob.cl/*"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
